@@ -4,7 +4,8 @@ import { Logo } from "@/components/logo";
 
 const footerLinks = [
   { href: "https://x.com/pumpfun", label: "X" },
-  { href: "https://discord.com/invite/pumpfun", label: "Discord" },
+  { href: "https://www.tiktok.com/@pump.fun", label: "TikTok" },
+  { href: "https://www.youtube.com/@pumpfunofficial", label: "YouTube" },
   { href: "https://pump.fun", label: "Go to pump.fun" },
 ];
 
