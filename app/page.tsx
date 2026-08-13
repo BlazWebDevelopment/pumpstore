@@ -1,0 +1,55 @@
+import { ProductCard } from "@/components/product-card";
+import { categories, products } from "@/lib/products";
+
+export default function StorePage() {
+  return (
+    <>
+      <section>
+        <div className="mx-auto max-w-[1120px] px-5 pb-12 pt-32 sm:pt-40">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-soft px-3.5 py-1.5 text-[13px] font-medium text-brand">
+            <span className="size-1.5 animate-pulse rounded-full bg-brand" />
+            Every item is coming soon
+          </span>
+
+          <h1 className="display mt-6 text-[clamp(2.5rem,7vw,4.25rem)] text-white">pump.store</h1>
+
+          <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-text-tertiary sm:text-[17px]">
+            Merch for the people who trade viral moments. Six shirts, three cups and two plushies —
+            nothing is purchasable yet, so open an item for the spec sheet and pick your size before
+            drop day.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-2">
+            <span className="rounded-full bg-brand-soft px-3 py-1.5 text-[13px] font-medium text-brand">
+              All {products.length}
+            </span>
+            {categories.map((category) => (
+              <span
+                key={category}
+                className="rounded-full border border-border-secondary bg-bg-secondary px-3 py-1.5 text-[13px] text-text-tertiary"
+              >
+                {category}
+                <span className="ml-1.5 text-text-lowest">
+                  {products.filter((product) => product.category === category).length}
+                </span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1120px] px-5 py-12 sm:py-16">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
+          {products.map((product, index) => (
+            <ProductCard key={product.slug} product={product} priority={index < 4} />
+          ))}
+        </div>
+
+        <p className="mt-10 rounded-2xl border border-border-secondary bg-bg-secondary px-5 py-4 text-[14px] leading-relaxed text-text-tertiary">
+          <span className="font-medium text-text-primary">Heads up:</span> the whole catalogue is
+          pre-release. Buy buttons stay disabled site-wide until Drop 01 goes live.
+        </p>
+      </section>
+    </>
+  );
+}

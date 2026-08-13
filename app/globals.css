@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/* Design tokens mirrored from pump.fun's public theme */
+@theme {
+  --font-sans: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-pixel), ui-monospace, "SFMono-Regular", monospace;
+
+  --color-bg-page: #14151c;
+  --color-bg-deep: #0a0a10;
+  --color-bg-primary: #111113;
+  --color-bg-secondary: #18191b;
+  --color-bg-tertiary: #212225;
+  --color-bg-elevated: #272a2d;
+
+  --color-border-primary: #18191b;
+  --color-border-secondary: #212225;
+  --color-border-tertiary: #272a2d;
+  --color-border-low: #38383f;
+  --color-border-default: #4b4c52;
+
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #e4e4e7;
+  --color-text-tertiary: #a1a1aa;
+  --color-text-low: #8a8a8f;
+  --color-text-lowest: #74757a;
+  --color-text-disabled: #74757a;
+
+  --color-brand: #86efac;
+  --color-brand-strong: #4ade80;
+  --color-brand-deep: #22c55e;
+  --color-brand-ink: #052e16;
+  --color-brand-soft: #86efac24;
+
+  --color-positive: #1fd978;
+  --color-negative: #ff6467;
+  --color-warning: #facc15;
+
+  --radius-token-sm: 8px;
+  --radius-token-lg: 16px;
+
+  --shadow-token: -8.5px 1px 4.5px 0px #14151c4a, -8.5px 1px 2px -1px #14151c4a;
+  --shadow-token-lg: -8.5px 1px 4.5px 0px #14151c4a, -8.5px 4px 6px -1px #14151c4a;
+  --shadow-token-xl: -8.5px 1px 4.5px 0px #14151c4a, -8.5px 8px 10px -1px #14151c4a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * One backdrop for the whole document instead of a background per section, so
+ * the night sky fades out gradually and no section edge shows as a hard line.
+ */
+.page-backdrop {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: min(1600px, 190vh);
+  pointer-events: none;
+}
+
+.page-glow {
+  background-image: radial-gradient(
+    130% 78% at 50% -10%,
+    #262d57 0%,
+    #1b2140 26%,
+    #171a2c 48%,
+    rgba(20, 21, 28, 0.6) 68%,
+    rgba(20, 21, 28, 0) 88%
+  );
+}
+
+.page-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    62% 42% at 50% 30%,
+    rgba(134, 239, 172, 0.13) 0%,
+    rgba(134, 239, 172, 0.05) 45%,
+    rgba(134, 239, 172, 0) 100%
+  );
+}
+
+::selection {
+  background-color: #86efac;
+  color: #052e16;
+}
+
+/* Headline treatment copied from the landing page: Inter 600, tight tracking */
+.display {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+/* Starfield used behind the hero, same flavour as the landing page night sky */
+.starfield {
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 42%, transparent 82%);
+  mask-image: linear-gradient(to bottom, black 0%, black 42%, transparent 82%);
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, rgba(255, 255, 255, 0.75) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 28% 62%, rgba(255, 255, 255, 0.45) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 42% 12%, rgba(255, 255, 255, 0.6) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 57% 44%, rgba(255, 255, 255, 0.35) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 68% 22%, rgba(255, 255, 255, 0.65) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 78% 72%, rgba(255, 255, 255, 0.4) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 88% 32%, rgba(255, 255, 255, 0.55) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 8% 82%, rgba(255, 255, 255, 0.4) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 35% 88%, rgba(255, 255, 255, 0.3) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 92% 88%, rgba(255, 255, 255, 0.35) 50%, transparent 51%);
+  background-size: 100% 100%;
+}
+
+/* Hairline rule for section breaks — fades out at both ends, so it reads as a
+   seam rather than a hard edge between two blocks of colour. */
+.soft-rule {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.09) 22%,
+    rgba(255, 255, 255, 0.09) 78%,
+    transparent 100%
+  );
+}
+
+.pixel-type {
+  font-family: var(--font-pixel), ui-monospace, "SFMono-Regular", monospace;
+  letter-spacing: 0.08em;
+}
