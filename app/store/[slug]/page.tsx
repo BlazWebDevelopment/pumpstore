@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { DisabledButton, SecondaryLink } from "@/components/buttons";
+import { SecondaryLink } from "@/components/buttons";
 import { ProductCard } from "@/components/product-card";
 import { ProductImage } from "@/components/product-image";
 import { getProduct, getRelated, products } from "@/lib/products";
@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   }
 
   return {
-    title: `${product.name} — coming soon`,
+    title: product.name,
     description: product.tagline,
     openGraph: {
-      title: `${product.name} — coming soon | pump.store`,
+      title: `${product.name} | pump.store`,
       description: product.tagline,
       images: [{ url: product.image }],
     },
@@ -65,9 +65,6 @@ export default async function ProductPage({ params }: Params) {
                   sizes="(min-width: 1024px) 520px, 100vw"
                   priority
                 />
-                <span className="absolute right-4 top-4 rounded-full bg-brand px-3 py-1.5 text-[12px] font-semibold text-brand-ink">
-                  Coming soon
-                </span>
               </div>
             </div>
 
@@ -91,19 +88,12 @@ export default async function ProductPage({ params }: Params) {
                   {product.sizes.map((size) => (
                     <span
                       key={size}
-                      aria-disabled="true"
-                      className="cursor-not-allowed rounded-lg border border-border-secondary bg-bg-secondary px-3.5 py-2 text-[13.5px] text-text-disabled"
+                      className="rounded-lg border border-border-secondary bg-bg-secondary px-3.5 py-2 text-[13.5px] text-text-secondary"
                     >
                       {size}
                     </span>
                   ))}
                 </div>
-              </div>
-
-              <div className="mt-7 flex flex-col gap-3">
-                <DisabledButton size="lg" className="w-full">
-                  Coming soon
-                </DisabledButton>
               </div>
 
               <div className="mt-8 border-t border-border-secondary pt-7">
@@ -146,7 +136,7 @@ export default async function ProductPage({ params }: Params) {
         <div className="mx-auto max-w-[1120px] px-5 py-16 sm:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <span className="pixel-type text-[13px] text-brand">also coming</span>
+              <span className="pixel-type text-[13px] text-brand">more merch</span>
               <h2 className="display mt-3 text-[28px] text-white sm:text-[32px]">Pairs well with</h2>
             </div>
             <SecondaryLink href="/">Back to the store</SecondaryLink>

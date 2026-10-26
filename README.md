@@ -2,8 +2,8 @@
 
 The merch store for the pump.fun app, styled to match [pump.fun](https://pump.fun) and its
 [landing page](https://pump.fun/landing). The store itself is the landing page — there is no separate
-marketing site. Eleven items are listed (six shirts, three cups, two plushies), each with its own slug
-page, and every buy button is intentionally disabled because nothing is purchasable yet.
+marketing site. Eleven items are listed (six shirts, three cups, a plushie and a costume), each with
+its own slug page.
 
 ## Stack
 
@@ -33,7 +33,7 @@ npm run lint    # eslint
 | Route           | What it is                                                        |
 | --------------- | ----------------------------------------------------------------- |
 | `/`             | The store — hero strip, category counts, full product grid         |
-| `/store/[slug]` | Item page: photo, spec sheet, sizes, disabled buy button           |
+| `/store/[slug]` | Item page: photo, spec sheet, sizes                                |
 | `/store`        | Redirects to `/`                                                   |
 | `404`           | On-brand not-found page                                            |
 
@@ -59,8 +59,8 @@ pill logomark and favicon are pump.fun's own icon assets in `public/`, and the h
 
 ## Product images
 
-Original shots live in `app/images/{shirt,mug,plushie}/`. The store serves square WebP tiles built
-from them in `public/items/<slug>.webp`. To rebuild after adding or replacing a shot, update the
+Original shots live in `app/images/{shirt,mug,plushie,costume}/`. The store serves square WebP tiles
+built from them in `public/items/<slug>.webp`. To rebuild after adding or replacing a shot, update the
 mapping at the top of the script and run:
 
 ```bash
@@ -70,19 +70,8 @@ node scripts/prepare-product-images.mjs
 Each source is padded out to a 1200 × 1200 square using its own top-left background colour, so every
 tile in the grid is the same shape and the padding is invisible against the mockup backdrop.
 
-## Coming soon behaviour
-
-This is deliberate and applies everywhere:
-
-- Item pages render a disabled `Coming soon` button instead of add-to-cart
-- Sizes are shown but not selectable
-- Cards and item pages carry a `Coming soon` badge
-
-To turn a product into a real purchase later, add stock handling in `lib/products.ts` and swap
-`DisabledButton` in `app/store/[slug]/page.tsx` for a real cart action.
-
 ## Content
 
 Products live in `lib/products.ts` as a typed array: slug, ticker, category, price, image, copy, spec
-rows and sizes. Six shirts (`Shirts`), three cups (`Cups`) and two plushies (`Plush`), each
-using the real product photography.
+rows and sizes. Six shirts (`Shirts`), three cups (`Cups`), one plushie (`Plush`) and one costume
+(`Costumes`), each using the real product photography.

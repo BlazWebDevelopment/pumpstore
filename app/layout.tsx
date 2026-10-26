@@ -26,11 +26,10 @@ export const metadata: Metadata = {
     template: "%s | pump.store",
   },
   description:
-    "The merch counter for pump.fun. Six shirts, three cups and two plushies — every item is coming soon.",
+    "The merch counter for pump.fun. Six shirts, three cups, a plushie and a costume.",
   openGraph: {
     title: "pump.store — merch for the people who trade viral moments",
-    description:
-      "Six shirts, three cups and two plushies. Every item is coming soon.",
+    description: "Six shirts, three cups, a plushie and a costume.",
     url: "https://pump.store",
     siteName: "pump.store",
     type: "website",
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "pump.store",
-    description: "Merch for the people who trade viral moments. Coming soon.",
+    description: "Merch for the people who trade viral moments.",
   },
   icons: {
     icon: [

@@ -2,7 +2,7 @@ export type Product = {
   slug: string;
   name: string;
   ticker: string;
-  category: "Shirts" | "Cups" | "Plush";
+  category: "Shirts" | "Cups" | "Plush" | "Costumes";
   price: number;
   image: string;
   tagline: string;
@@ -254,26 +254,26 @@ export const products: Product[] = [
     sizes: ["One size"],
   },
   {
-    slug: "berpy-plushie",
-    name: "Berpy Plushie for Anxiety Relief",
-    ticker: "BERPY",
-    category: "Plush",
-    price: 32,
-    image: "/items/berpy-plushie.webp",
-    tagline: "Squeeze it until the candle turns green.",
+    slug: "scary-pill",
+    name: "Scary Pill",
+    ticker: "SCARY",
+    category: "Costumes",
+    price: 49,
+    image: "/items/scary-pill.webp",
+    tagline: "Become the pill. Terrify the bears.",
     description:
-      "Berpy is a weighted squish plush built for the part of the day that gets tense. Slow-rebound filling means it takes a second to spring back, which is the whole point — squeeze, breathe, let go, repeat. Big enough to hug, small enough to keep next to the keyboard.",
+      "A full-body pill costume, white cap up top and orange capsule below, with a face opening so everyone knows exactly who aped in. Slips on over your own clothes and is ready for any party, stream or chart-watching session.",
     details: [
-      "30 cm tall, slow-rebound squish filling",
-      "Weighted body, roughly 700 g",
-      "Embroidered face, no glued-on parts",
-      "Hooded ears and stubby arms for gripping",
+      "Padded white and orange capsule body",
+      "Face opening in the cap",
+      "Arm openings, slips on over clothes",
+      "Black outline trim with highlight detail",
     ],
     specs: [
-      { label: "Colour", value: "Green / white" },
-      { label: "Size", value: "30 cm tall" },
-      { label: "Weight", value: "≈ 700 g" },
-      { label: "Material", value: "Minky plush, slow-rebound fill" },
+      { label: "Colour", value: "White / orange" },
+      { label: "Fit", value: "Adult, one size" },
+      { label: "Material", value: "Polyester, foam padding" },
+      { label: "Care", value: "Spot clean only" },
     ],
     sizes: ["One size"],
   },

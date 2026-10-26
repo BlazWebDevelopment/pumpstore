@@ -9,11 +9,6 @@ export function SiteHeader() {
         <Logo size={22} wordmarkClassName="text-[17px]" />
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <span className="hidden items-center gap-2 rounded-full bg-brand-soft px-3 py-1.5 text-[13px] font-medium text-brand md:inline-flex">
-            <span className="size-1.5 rounded-full bg-brand" />
-            Store opening soon
-          </span>
-
           <Link
             href="https://pump.fun"
             target="_blank"

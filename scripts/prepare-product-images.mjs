@@ -20,7 +20,7 @@ const mapping = [
   { src: "app/images/mug/OsCKgvzS42.png", out: "forest-mug.webp" },
   { src: "app/images/mug/7RTdeRJgab.png", out: "stamp-mug.webp" },
   { src: "app/images/plushie/YFe9nrdHi5.png", out: "pill-plushie.webp" },
-  { src: "app/images/plushie/7YaOzguVnd.png", out: "berpy-plushie.webp" },
+  { src: "app/images/costume/0nd87WDo8o.png", out: "scary-pill.webp" },
 ];
 
 const size = 1200;

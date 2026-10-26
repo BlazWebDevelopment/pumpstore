@@ -15,16 +15,11 @@ export function ProductCard({
       href={`/store/${product.slug}`}
       className="group flex flex-col overflow-hidden rounded-2xl border border-border-secondary bg-bg-secondary transition-[transform,border-color,background-color] duration-150 ease-out hover:-translate-y-0.5 hover:border-border-low hover:bg-bg-tertiary/60"
     >
-      <div className="relative">
-        <ProductImage
-          product={product}
-          className="aspect-square w-full"
-          priority={priority}
-        />
-        <span className="absolute right-3 top-3 rounded-full bg-brand px-2.5 py-1 text-[11px] font-semibold text-brand-ink">
-          Coming soon
-        </span>
-      </div>
+      <ProductImage
+        product={product}
+        className="aspect-square w-full"
+        priority={priority}
+      />
 
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="min-w-0">

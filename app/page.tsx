@@ -6,16 +6,11 @@ export default function StorePage() {
     <>
       <section>
         <div className="mx-auto max-w-[1120px] px-5 pb-12 pt-32 sm:pt-40">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-soft px-3.5 py-1.5 text-[13px] font-medium text-brand">
-            <span className="size-1.5 animate-pulse rounded-full bg-brand" />
-            Every item is coming soon
-          </span>
-
-          <h1 className="display mt-6 text-[clamp(2.5rem,7vw,4.25rem)] text-white">pump.store</h1>
+          <h1 className="display text-[clamp(2.5rem,7vw,4.25rem)] text-white">pump.store</h1>
 
           <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-text-tertiary sm:text-[17px]">
-            Merch for the people who trade viral moments. Six shirts, three cups and two plushies —
-            open an item for the full spec sheet.
+            Merch for the people who trade viral moments. Six shirts, three cups, a plushie and a
+            costume — open an item for the full spec sheet.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-2">

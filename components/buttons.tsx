@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ComponentProps, ReactNode } from "react";
+import type { ReactNode } from "react";
 
 const base =
   "inline-flex shrink-0 items-center justify-center gap-2 rounded-full text-[15px] font-medium whitespace-nowrap transition-[transform,filter,background-color] duration-150 ease-out";
@@ -50,24 +50,5 @@ export function SecondaryLink({
     <Link href={href} className={`${base} ${sizes[size]} ${secondary} ${className}`}>
       {children}
     </Link>
-  );
-}
-
-export function DisabledButton({
-  children,
-  size = "md",
-  className = "",
-  ...props
-}: ComponentProps<"button"> & { size?: Size }) {
-  return (
-    <button
-      type="button"
-      disabled
-      aria-disabled="true"
-      className={`${base} ${sizes[size]} cursor-not-allowed border border-border-secondary bg-bg-tertiary text-text-disabled ${className}`}
-      {...props}
-    >
-      {children}
-    </button>
   );
 }
