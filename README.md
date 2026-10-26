@@ -75,9 +75,8 @@ tile in the grid is the same shape and the padding is invisible against the mock
 This is deliberate and applies everywhere:
 
 - Item pages render a disabled `Coming soon` button instead of add-to-cart
-- The notify / waitlist button is disabled too
 - Sizes are shown but not selectable
-- Cards and item pages carry a `Coming soon` badge and drop label
+- Cards and item pages carry a `Coming soon` badge
 
 To turn a product into a real purchase later, add stock handling in `lib/products.ts` and swap
 `DisabledButton` in `app/store/[slug]/page.tsx` for a real cart action.
@@ -85,5 +84,5 @@ To turn a product into a real purchase later, add stock handling in `lib/product
 ## Content
 
 Products live in `lib/products.ts` as a typed array: slug, ticker, category, price, image, copy, spec
-rows, sizes and drop label. Six shirts (`Shirts`), three cups (`Cups`) and two plushies (`Plush`), each
+rows and sizes. Six shirts (`Shirts`), three cups (`Cups`) and two plushies (`Plush`), each
 using the real product photography.

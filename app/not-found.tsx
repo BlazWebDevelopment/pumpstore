@@ -9,7 +9,7 @@ export default function NotFound() {
           Nothing to see here yet
         </h1>
         <p className="mt-5 max-w-md text-[16px] leading-relaxed text-text-tertiary">
-          That item is not part of a drop. Head back to the store for the full line-up.
+          That item does not exist. Head back to the store for the full line-up.
         </p>
         <div className="mt-8">
           <PrimaryLink href="/" size="lg">

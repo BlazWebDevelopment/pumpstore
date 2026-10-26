@@ -34,8 +34,7 @@ export function SiteFooter() {
       </div>
       <div className="mx-auto max-w-[1120px] px-5 pb-10">
         <p className="text-[12.5px] leading-relaxed text-text-lowest">
-          pump.store is the merch counter for pump.fun. Nothing here is for sale yet — every item is
-          in production and the buy buttons stay off until the first drop goes live.
+          pump.store is the merch counter for pump.fun.
         </p>
       </div>
     </footer>

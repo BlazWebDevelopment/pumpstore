@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "pump.store — merch for the people who trade viral moments",
     description:
-      "Six shirts, three cups and two plushies. Every item is coming soon — the first drop lands with the app.",
+      "Six shirts, three cups and two plushies. Every item is coming soon.",
     url: "https://pump.store",
     siteName: "pump.store",
     type: "website",

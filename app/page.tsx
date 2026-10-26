@@ -15,8 +15,7 @@ export default function StorePage() {
 
           <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-text-tertiary sm:text-[17px]">
             Merch for the people who trade viral moments. Six shirts, three cups and two plushies —
-            nothing is purchasable yet, so open an item for the spec sheet and pick your size before
-            drop day.
+            open an item for the full spec sheet.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-2">
@@ -44,11 +43,6 @@ export default function StorePage() {
             <ProductCard key={product.slug} product={product} priority={index < 4} />
           ))}
         </div>
-
-        <p className="mt-10 rounded-2xl border border-border-secondary bg-bg-secondary px-5 py-4 text-[14px] leading-relaxed text-text-tertiary">
-          <span className="font-medium text-text-primary">Heads up:</span> the whole catalogue is
-          pre-release. Buy buttons stay disabled site-wide until Drop 01 goes live.
-        </p>
       </section>
     </>
   );

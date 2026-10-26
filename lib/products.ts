@@ -10,8 +10,6 @@ export type Product = {
   details: string[];
   specs: { label: string; value: string }[];
   sizes: string[];
-  drop: string;
-  hype: string;
 };
 
 export const products: Product[] = [
@@ -38,8 +36,6 @@ export const products: Product[] = [
       { label: "Print", value: "Four-colour screen print" },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-    drop: "Drop 01",
-    hype: "12.4K watching",
   },
   {
     slug: "circle-stamp-tee",
@@ -64,8 +60,6 @@ export const products: Product[] = [
       { label: "Print", value: "One-colour water-based print" },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-    drop: "Drop 01",
-    hype: "8.7K watching",
   },
   {
     slug: "wordmark-tee",
@@ -90,8 +84,6 @@ export const products: Product[] = [
       { label: "Print", value: "Three-colour screen print" },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-    drop: "Drop 01",
-    hype: "10.1K watching",
   },
   {
     slug: "launch-trade-earn-tee",
@@ -116,8 +108,6 @@ export const products: Product[] = [
       { label: "Print", value: "Four-colour screen print" },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-    drop: "Drop 02",
-    hype: "9.8K watching",
   },
   {
     slug: "forest-logo-tee",
@@ -142,8 +132,6 @@ export const products: Product[] = [
       { label: "Print", value: "Three-colour screen print" },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-    drop: "Drop 02",
-    hype: "7.3K watching",
   },
   {
     slug: "halftone-pill-tee",
@@ -168,8 +156,6 @@ export const products: Product[] = [
       { label: "Print", value: "Six-colour screen print" },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-    drop: "Drop 02",
-    hype: "6.4K watching",
   },
   {
     slug: "black-pill-mug",
@@ -194,8 +180,6 @@ export const products: Product[] = [
       { label: "Care", value: "Dishwasher safe" },
     ],
     sizes: ["One size"],
-    drop: "Drop 01",
-    hype: "7.9K watching",
   },
   {
     slug: "forest-mug",
@@ -220,8 +204,6 @@ export const products: Product[] = [
       { label: "Care", value: "Dishwasher safe" },
     ],
     sizes: ["One size"],
-    drop: "Drop 01",
-    hype: "6.9K watching",
   },
   {
     slug: "stamp-mug",
@@ -246,8 +228,6 @@ export const products: Product[] = [
       { label: "Care", value: "Dishwasher safe" },
     ],
     sizes: ["One size"],
-    drop: "Drop 02",
-    hype: "4.6K watching",
   },
   {
     slug: "pill-plushie",
@@ -272,8 +252,6 @@ export const products: Product[] = [
       { label: "Care", value: "Surface wash only" },
     ],
     sizes: ["One size"],
-    drop: "Drop 01",
-    hype: "18.3K watching",
   },
   {
     slug: "berpy-plushie",
@@ -298,8 +276,6 @@ export const products: Product[] = [
       { label: "Material", value: "Minky plush, slow-rebound fill" },
     ],
     sizes: ["One size"],
-    drop: "Drop 01",
-    hype: "21.7K watching",
   },
 ];
 

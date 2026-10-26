@@ -65,9 +65,6 @@ export default async function ProductPage({ params }: Params) {
                   sizes="(min-width: 1024px) 520px, 100vw"
                   priority
                 />
-                <span className="absolute left-4 top-4 rounded-full bg-bg-page/85 px-3 py-1.5 text-[12px] font-medium text-text-secondary">
-                  {product.drop}
-                </span>
                 <span className="absolute right-4 top-4 rounded-full bg-brand px-3 py-1.5 text-[12px] font-semibold text-brand-ink">
                   Coming soon
                 </span>
@@ -84,17 +81,11 @@ export default async function ProductPage({ params }: Params) {
 
               <div className="mt-6 flex items-center gap-3">
                 <span className="text-[26px] font-semibold text-white">${product.price}</span>
-                <span className="rounded-full bg-brand-soft px-2.5 py-1 text-[12px] font-medium text-brand">
-                  Not on sale yet
-                </span>
               </div>
 
               <div className="mt-7">
                 <p className="text-[13px] font-medium text-text-low">
                   {product.sizes.length > 1 ? "Size" : "Availability"}
-                  <span className="ml-2 font-normal text-text-lowest">
-                    selection opens on drop day
-                  </span>
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {product.sizes.map((size) => (
@@ -110,16 +101,9 @@ export default async function ProductPage({ params }: Params) {
               </div>
 
               <div className="mt-7 flex flex-col gap-3">
-                <DisabledButton size="lg" className="w-full" title="Not available to buy yet">
+                <DisabledButton size="lg" className="w-full">
                   Coming soon
                 </DisabledButton>
-                <DisabledButton size="md" className="w-full">
-                  Notify me — waitlist opens soon
-                </DisabledButton>
-                <p className="text-[12.5px] leading-relaxed text-text-lowest">
-                  This item is still in production. Checkout is disabled across pump.store until{" "}
-                  {product.drop} ships.
-                </p>
               </div>
 
               <div className="mt-8 border-t border-border-secondary pt-7">
@@ -150,11 +134,6 @@ export default async function ProductPage({ params }: Params) {
                   </div>
                 ))}
               </dl>
-
-              <p className="mt-5 flex items-center gap-2 text-[12.5px] text-text-lowest">
-                <span className="size-1.5 rounded-full bg-brand" />
-                {product.hype} · {product.drop}
-              </p>
             </div>
           </div>
         </div>
